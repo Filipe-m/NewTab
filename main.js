@@ -85,7 +85,7 @@ function background() {
       el.style.background = `url(${data.url}) no-repeat center/cover`
     })
 }
-//background()
+background()
 
 function sleep(seconds) {
   const date = Date.now();
