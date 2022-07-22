@@ -134,11 +134,11 @@ function onOrOff() {
 onOrOff()
 
 function openNav() {
-  document.getElementById('mySidebar').style.width = '6%'
+  document.getElementById('mySidebar').style.width = '80px'
   setTimeout(() => {
-    document.getElementById('with').style.width = '3%'
+    document.getElementById('with').style.width = '40px'
     document.getElementById('with').style.height = '5%'
-    document.getElementById('without').style.width = '3%'
+    document.getElementById('without').style.width = '40px'
     document.getElementById('without').style.height = '5%'
   }, 150)
   if (localStorage.cote === 'true') {
