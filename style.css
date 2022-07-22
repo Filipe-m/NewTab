@@ -91,8 +91,9 @@ input {
   margin: auto;
   border-radius: 15px;
   background-color: rgba(37, 36, 36, 0.933);
-  height: min-content;
+  height: fit-content;
   width: fit-content;
+  padding: 4px;
   margin-top: 20%;
 }
 .clockTime {
