@@ -31,15 +31,18 @@
   <body>
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-      <a href="#">####</a>
-      <a href="#">App1</a>
-      <a href="#">App2</a>
-      <a href="#">app3</a>
+      <a href="https://www.duolingo.com/learn" ><img src="Images/duolingo.ico" class="icon"></a>
+      <a href="https://github.com" ><img src="https://github.githubassets.com/favicons/favicon-dark.svg" class="icon"></a>
+      <a href="https://www.youtube.com/watch?v=7YmNvCy30FU"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Lofi_girl_logo.jpg/250px-Lofi_girl_logo.jpg" class="icon"></a>
+      <a href="#">app</a>
+      <a href="#"></a>
     </div>
     <main class="main">
       <div class="container">
         <div class="left">
-          <div id="main">
+          <button id="with" onclick="withCote()">✓</button>
+          <button id="without" onclick="withoutCote()">✕</button>
+          <div id="Nav">
             <button class="openbtn" onclick="openNav()">☰</button>
           </div>
           <div id="cotation">
@@ -72,7 +75,7 @@
             <br /><span class="clockAmPm"> PM </span>
           </div>
           <div class="searchBox">
-            <img src="images/IOS_Google_icon.png" class="googleIcon" />
+            <img src="Images/googleIcon.png" class="googleIcon" />
             <form action="https://google.com/search" target="_blank" type="GET">
               <input type="hidden" name=" " />
               <input type="text" name="q" placeholder="Pesquisar..." />

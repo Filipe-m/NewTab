@@ -95,26 +95,70 @@ function sleep(seconds) {
   } while (currentDate - date < seconds);
 }
 
-function openNav() {
-  document.getElementById('mySidebar').style.width = '150px';
-  setTimeout(() => {  
-    document.getElementById('ul').style.width = "0px";
-    document.getElementById('ul').style.height = "0px";
-    document.getElementById('ul').style.padding = "0px";
-    document.getElementById('cotationCardano').innerHTML = "";
-    document.getElementById('cotationSLP').innerHTML = "";
-    document.getElementById('cotationUSD').innerHTML = "";
-     }, 150);
+
+function coteOpen(){
+  document.getElementById('ul').style.width = "max-content";
+  document.getElementById('ul').style.height = "max-content";
+  document.getElementById('ul').style.padding = "10px";
+  cotationCardano();
+  cotationSLP();
+  cotationUSD();
 }
 
+function coteClose(){
+  document.getElementById('ul').style.width = "0px";
+  document.getElementById('ul').style.height = "0px";
+  document.getElementById('ul').style.padding = "0px";
+  document.getElementById('cotationCardano').innerHTML = "";
+  document.getElementById('cotationSLP').innerHTML = "";
+  document.getElementById('cotationUSD').innerHTML = "";
+
+}
+
+
+function withCote(){
+  localStorage.cote = "true";
+  coteOpen()
+}
+
+function withoutCote(){
+  localStorage.cote = "false";
+  coteClose()
+}
+
+function onOrOff(){
+  if(localStorage.cote === "false"){
+    coteClose()
+  }
+  if(localStorage.cote === "true"){
+    coteOpen()
+  }
+}
+onOrOff()
+
+function openNav() {
+  document.getElementById('mySidebar').style.width = '6%';
+  setTimeout(() => {
+  document.getElementById('with').style.width = "3%";
+  document.getElementById('with').style.height = "5%";
+  document.getElementById('without').style.width = "3%";
+  document.getElementById('without').style.height = "5%";
+  }, 150);
+  if(localStorage.cote === "true"){
+    coteOpen()
+  }
+
+}
+
+
 function closeNav() {
+  document.getElementById('with').style.width = "0px";
+  document.getElementById('with').style.height = "0px";
+  document.getElementById('without').style.width = "0px";
+  document.getElementById('without').style.height = "0px";
   document.getElementById('mySidebar').style.width = '0';
-  setTimeout(() => {  
-    document.getElementById('ul').style.width = "max-content";
-    document.getElementById('ul').style.height = "max-content";
-    document.getElementById('ul').style.padding = "10px";
-    cotationCardano()
-    cotationSLP()
-    cotationUSD()
-    ; }, 150);
+
+  if(localStorage.cote === "false"){
+    coteClose()
+  }
 }

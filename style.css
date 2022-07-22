@@ -120,12 +120,13 @@ input {
 }
 
 .sidebar a {
-  padding: 8px 8px 8px 10px;
+  padding: 10px 8px 8px 25%;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
   display: block;
   transition: 1s;
+  
 }
 
 .sidebar a:hover {
@@ -135,7 +136,7 @@ input {
 .sidebar .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
+  right: 0;
   font-size: 36px;
   margin-left: 50px;
 }
@@ -160,3 +161,44 @@ input {
   background-color: rgba(37, 36, 36, 0.933);
 }
 
+.icon{
+  width: 60%;
+}
+
+#with{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  z-index: 1;
+  color: #f0f3ff;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  outline: none;
+  border: none;
+}
+
+#with:hover {
+  background-color:rgb(46, 46, 46);
+}
+
+#without{
+  position: absolute;
+  bottom: 0;
+  left: 3%;
+  width: 0;
+  height: 0;
+  z-index: 1;
+  color: #f0f3ff;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  outline: none;
+  border: none;
+}
+
+#without:hover {
+  background-color:rgb(46, 46, 46);
+}
