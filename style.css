@@ -88,6 +88,7 @@ input {
 }
 
 .clock {
+  gap: 3px;;
   margin: auto;
   border-radius: 15px;
   background-color: rgba(37, 36, 36, 0.933);
