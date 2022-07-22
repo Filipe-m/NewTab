@@ -88,77 +88,72 @@ function background() {
 background()
 
 function sleep(seconds) {
-  const date = Date.now();
-  let currentDate = null;
+  const date = Date.now()
+  let currentDate = null
   do {
-    currentDate = Date.now();
-  } while (currentDate - date < seconds);
+    currentDate = Date.now()
+  } while (currentDate - date < seconds)
 }
 
-
-function coteOpen(){
-  document.getElementById('ul').style.width = "max-content";
-  document.getElementById('ul').style.height = "max-content";
-  document.getElementById('ul').style.padding = "10px";
-  cotationCardano();
-  cotationSLP();
-  cotationUSD();
+function coteOpen() {
+  document.getElementById('ul').style.width = 'max-content'
+  document.getElementById('ul').style.height = 'max-content'
+  document.getElementById('ul').style.padding = '10px'
+  cotationCardano()
+  cotationSLP()
+  cotationUSD()
 }
 
-function coteClose(){
-  document.getElementById('ul').style.width = "0px";
-  document.getElementById('ul').style.height = "0px";
-  document.getElementById('ul').style.padding = "0px";
-  document.getElementById('cotationCardano').innerHTML = "";
-  document.getElementById('cotationSLP').innerHTML = "";
-  document.getElementById('cotationUSD').innerHTML = "";
-
+function coteClose() {
+  document.getElementById('ul').style.width = '0px'
+  document.getElementById('ul').style.height = '0px'
+  document.getElementById('ul').style.padding = '0px'
+  document.getElementById('cotationCardano').innerHTML = ''
+  document.getElementById('cotationSLP').innerHTML = ''
+  document.getElementById('cotationUSD').innerHTML = ''
 }
 
-
-function withCote(){
-  localStorage.cote = "true";
+function withCote() {
+  localStorage.cote = 'true'
   coteOpen()
 }
 
-function withoutCote(){
-  localStorage.cote = "false";
+function withoutCote() {
+  localStorage.cote = 'false'
   coteClose()
 }
 
-function onOrOff(){
-  if(localStorage.cote === "false"){
+function onOrOff() {
+  if (localStorage.cote === 'false') {
     coteClose()
   }
-  if(localStorage.cote === "true"){
+  if (localStorage.cote === 'true') {
     coteOpen()
   }
 }
 onOrOff()
 
 function openNav() {
-  document.getElementById('mySidebar').style.width = '6%';
+  document.getElementById('mySidebar').style.width = '6%'
   setTimeout(() => {
-  document.getElementById('with').style.width = "3%";
-  document.getElementById('with').style.height = "5%";
-  document.getElementById('without').style.width = "3%";
-  document.getElementById('without').style.height = "5%";
-  }, 150);
-  if(localStorage.cote === "true"){
+    document.getElementById('with').style.width = '3%'
+    document.getElementById('with').style.height = '5%'
+    document.getElementById('without').style.width = '3%'
+    document.getElementById('without').style.height = '5%'
+  }, 150)
+  if (localStorage.cote === 'true') {
     coteOpen()
   }
-
 }
 
-
 function closeNav() {
-  document.getElementById('with').style.width = "0px";
-  document.getElementById('with').style.height = "0px";
-  document.getElementById('without').style.width = "0px";
-  document.getElementById('without').style.height = "0px";
-  document.getElementById('mySidebar').style.width = '0';
+  document.getElementById('with').style.width = '0px'
+  document.getElementById('with').style.height = '0px'
+  document.getElementById('without').style.width = '0px'
+  document.getElementById('without').style.height = '0px'
+  document.getElementById('mySidebar').style.width = '0'
 
-  if(localStorage.cote === "false"){
+  if (localStorage.cote === 'false') {
     coteClose()
   }
 }
