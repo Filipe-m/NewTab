@@ -210,7 +210,7 @@ input {
 }
 
 #snakeGame{
-  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(131, 38, 181));
+  background-color: rgb(3, 255, 58);
   width: max-content;
   height: fit-content;
   position: relative;
@@ -219,13 +219,14 @@ input {
 }
 
 #snakeGame:hover{
-  background-image: none;
-  background-color: rgb(3, 255, 58);
+  background-color:unset;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(3, 255, 58));
 }
 
 .snake{
   text-decoration: none;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #111;
+  text-shadow: 2px 2px 5px white;
 
 }

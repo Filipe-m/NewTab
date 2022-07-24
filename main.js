@@ -149,9 +149,10 @@ function closeNav() {
 }
 
 var online = navigator.onLine  // Return if the user is online (Bool)
-if(online === false  ){
-  document.getElementById('snakeGame').style.width = '20px'
+if(online === true  ){
+  document.getElementById('snakeGame').style.width = '0px'
   document.getElementById('snakeGame').style.height = '0px'
+  document.getElementById('snakeGame').style.padding = '0px'
   document.getElementById('snakeGame').innerHTML = ''
 }
 
