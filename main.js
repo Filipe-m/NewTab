@@ -1,4 +1,4 @@
-class DigitalClock {
+class DigitalClock {                 //Makes the Clock
   constructor(element) {
     this.element = element
   }
@@ -37,7 +37,7 @@ const clockObject = new DigitalClock(clockElement)
 
 clockObject.start()
 
-// COTATION /////////////////
+// Get Cotations from cripto
 function cotationSLP() {
   const url =
     'https://api.coingecko.com/api/v3/simple/price?ids=smooth-love-potion&vs_currencies=brl'
@@ -74,8 +74,7 @@ function cotationCardano() {
 }
 cotationCardano()
 
-// BACKGROUND\\
-function background() {
+function background() {                                                               // Chenge the background to picture of the day
   const url =
     'https://api.nasa.gov/planetary/apod?api_key=qsghnMUvpZPggaWADSFAIjqtfkgd8bLzz9dddXDm'
   fetch(url)
@@ -87,15 +86,7 @@ function background() {
 }
 background()
 
-function sleep(seconds) {
-  const date = Date.now()
-  let currentDate = null
-  do {
-    currentDate = Date.now()
-  } while (currentDate - date < seconds)
-}
-
-function coteOpen() {
+function coteOpen() {                                                    //Open the Cote grid
   document.getElementById('ul').style.width = 'max-content'
   document.getElementById('ul').style.height = 'max-content'
   document.getElementById('ul').style.padding = '10px'
@@ -104,7 +95,7 @@ function coteOpen() {
   cotationUSD()
 }
 
-function coteClose() {
+function coteClose() {                                      //Close the Cote grid
   document.getElementById('ul').style.width = '0px'
   document.getElementById('ul').style.height = '0px'
   document.getElementById('ul').style.padding = '0px'
@@ -123,7 +114,7 @@ function withoutCote() {
   coteClose()
 }
 
-function onOrOff() {
+function onOrOff() {                       // Make a user preferencei for showing or not the cotes 
   if (localStorage.cote === 'false') {
     coteClose()
   }
@@ -141,7 +132,7 @@ function openNav() {
     document.getElementById('without').style.width = '40px'
     document.getElementById('without').style.height = '5%'
   }, 150)
-  if (localStorage.cote === 'true') {
+  if (localStorage.cote === 'true') { // Avoid closing the close ignoring the user preference
     coteOpen()
   }
 }
@@ -152,8 +143,15 @@ function closeNav() {
   document.getElementById('without').style.width = '0px'
   document.getElementById('without').style.height = '0px'
   document.getElementById('mySidebar').style.width = '0'
-
-  if (localStorage.cote === 'false') {
+  if (localStorage.cote === 'false') { // Avoid open the close ignoring the user preference
     coteClose()
   }
 }
+
+var online = navigator.onLine  // Return if the user is online (Bool)
+if(online === false  ){
+  document.getElementById('snakeGame').style.width = '20px'
+  document.getElementById('snakeGame').style.height = '0px'
+  document.getElementById('snakeGame').innerHTML = ''
+}
+

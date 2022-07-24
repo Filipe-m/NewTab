@@ -29,6 +29,10 @@ body{
 }
 
 .right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   width: 30%;
 }
@@ -203,4 +207,25 @@ input {
 
 #without:hover {
   background-color:rgb(46, 46, 46);
+}
+
+#snakeGame{
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(131, 38, 181));
+  width: max-content;
+  height: fit-content;
+  position: relative;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#snakeGame:hover{
+  background-image: none;
+  background-color: rgb(3, 255, 58);
+}
+
+.snake{
+  text-decoration: none;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #111;
+
 }
