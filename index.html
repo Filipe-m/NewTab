@@ -1,105 +1,23 @@
-<html id="html" lang="pt">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/Icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Exo+2:ital@1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <title>NewTab</title>
+    <title>New Tab</title>
   </head>
   <body>
-    <div id="mySidebar" class="sidebar">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-      <a href="https://www.duolingo.com/learn"
-        ><img src="Images/duolingo.ico" class="icon"
-      /></a>
-      <a href="https://github.com"
-        ><img
-          src="https://github.githubassets.com/favicons/favicon-dark.svg"
-          class="icon"
-      /></a>
-      <a href="https://www.youtube.com/watch?v=7YmNvCy30FU"
-        ><img
-          src="https://images-na.ssl-images-amazon.com/images/I/81ZWocf+hGL.png"
-          class="icon"
-      /></a>
-      <a href="https://open.spotify.com"
-        ><img
-          src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-icon-green-logo-8.png"
-          class="icon"
-      /></a>
-      <a href="#"></a>
-    </div>
-    <main class="main">
-      <div class="container">
-        <div class="left">
-          <button id="with" onclick="withCote()">✓</button>
-          <button id="without" onclick="withoutCote()">✕</button>
-          <div id="Nav">
-            <button class="openbtn" onclick="openNav()">☰</button>
-          </div>
-          <div id="cotation">
-            <ul id="ul">
-              <li>
-                <a
-                  id="cotationSLP"
-                  href="https://www.coingecko.com/pt/moedas/smooth-love-potion"
-                  target="_blank"
-                ></a>
-                <br />
-                <a
-                  id="cotationUSD"
-                  href="https://www.coingecko.com/pt/moedas/binance-usd"
-                  target="_blank"
-                ></a>
-                <br />
-                <a
-                  id="cotationCardano"
-                  href="https://www.coingecko.com/pt/moedas/cardano"
-                  target="_blank"
-                ></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="center">
-          <div class="clock">
-            <span class="clockTime"> 20:00 </span> <br>
-            <span class="clockAmPm"> PM </span>
-          </div>
-          <div class="searchBox">
-            <img src="Images/googleIcon.png" class="googleIcon" />
-            <form action="https://google.com/search" target="_blank" type="GET">
-              <input type="hidden" name=" " />
-              <input type="text" name="q" placeholder="Pesquisar..." />
-            </form>
-          </div>
-        </div>
-        <div class="right"></div>
-      </div>
-    </main>
-
-    <script src="main.js"></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
