@@ -29,13 +29,12 @@
 <style>
   .temp{
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.507);
-    padding: 1rem;
+    padding: 0rem;
     right: 0;
     top: 0;
     margin: 0.5rem;
     border-radius: 30px;
-    color: rgb(37, 37, 39);
+    color: white;
   }
   .clock{
     height: inherit;
