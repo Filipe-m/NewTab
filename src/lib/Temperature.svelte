@@ -6,8 +6,9 @@ const getWeather = () => {
   // API docs:  https://openweathermap.org/current#one
   let cityName = 'Goiânia' // Your city name
   let unit = 'metric' // Units of the data
+  let api = '38eb46c466d07fbb7b72aea0e547dd34' // OpenWeather API key (idc about mine so u can use)
   const url =
-    `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=${unit}&appid=38eb46c466d07fbb7b72aea0e547dd34`
+    `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=${unit}&appid=${api}`
   fetch(url)
     .then(response => response.json())
     .then(data => {

@@ -4,17 +4,18 @@
   import Searchbar from './lib/Searchbar.svelte';
   import { fade } from 'svelte/transition';
 	import { slide } from 'svelte/transition';
-	import { sineInOut } from 'svelte/easing';
   import { quintOut } from 'svelte/easing';
 
   let openSide = false
 
+  // This is the list of sites that appears in the side-bar, the diffenrence from img to link is only the https://
   let sites = [
-    {name : 'Youtube', img:'www.youtube.com', link: 'https://www.youtube.com/'},
-    {name : 'Whatsapp', img: 'web.whatsapp.com', link: 'https://web.whatsapp.com/'},
+    {name : 'Youtube', img:'www.youtube.com', link: 'https://www.youtube.com'},
+    {name : 'Whatsapp', img: 'web.whatsapp.com', link: 'https://web.whatsapp.com'},
     {name: 'Github', img:'github.com/Filipe-m?tab=repositories', link: 'https://github.com/Filipe-m?tab=repositories'},
     {name: 'Twitter', img: 'twitter.com', link: 'https://twitter.com/home'},
-    {name: 'Instagram' , img: 'instagram.com', link: 'https://www.instagram.com/'}
+    {name: 'Instagram' , img: 'instagram.com', link: 'https://www.instagram.com'},
+    {name: 'Translate', img: 'translate.google.com', link:'https://translate.google.com/'}
   ]
 
   let internet = false
