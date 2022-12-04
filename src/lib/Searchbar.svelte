@@ -2,14 +2,21 @@
 
 </script>
 <div>
-  <img src="/src/assets/Search.svg" alt="">
-  <form action="https://google.com/search" autocomplete="off"  type="GET">
+  <form action="https://google.com/search" autocomplete="on"  type="GET">
     <input type="hidden" name=" " />
-    <input type="text" name="q" placeholder="Search..." />
+    <input type="text" autofocus name="q" placeholder="Search..." />
+    <button type="submit" ><img src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png" alt="SearchIcon"></button>
   </form>
 </div>
 
 <style>
+
+  button{
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    background-color: transparent;
+  }
   div{
     margin: 0;
     padding: 0;
@@ -38,5 +45,18 @@
   }
   input:focus,input:visited,input:active{
   outline: none;
+}
+
+form{
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img{
+  width: 2rem;
+  height: 2rem;
+  padding-right: 1rem;
 }
 </style>

@@ -15,7 +15,8 @@
     {name: 'Github', img:'github.com/Filipe-m?tab=repositories', link: 'https://github.com/Filipe-m?tab=repositories'},
     {name: 'Twitter', img: 'twitter.com', link: 'https://twitter.com/home'},
     {name: 'Instagram' , img: 'instagram.com', link: 'https://www.instagram.com'},
-    {name: 'Translate', img: 'translate.google.com', link:'https://translate.google.com/'}
+    {name: 'Translate', img: 'translate.google.com', link:'https://translate.google.com'},
+    {name: 'Twitch', img: 'www.twitch.tv', link: 'https://www.twitch.tv'}
   ]
 
   let internet = false
